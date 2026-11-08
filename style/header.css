@@ -1,1 +1,15 @@
-/*# sourceMappingURL=header.css.map */
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(236, 234, 230);
+  width: 100%;
+  height: 5vh;
+  margin: 0;
+  padding: 0%;
+  justify-content: space-evenly;
+}
+header .center {
+  display: flex;
+  flex-direction: row;
+  row-gap: 3%;
+}/*# sourceMappingURL=header.css.map */
