@@ -1,0 +1,88 @@
+.background{
+    background-image: url(../images/Image\ by\ JUSTIN\ BUISSON.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    direction: flex;
+    
+    height: 80vh;
+    margin: 0;
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        backdrop-filter: blur(10px);
+       width: auto;
+        height: auto;
+         font-family: sans-serif;
+            color: white;
+        padding: 1%;
+
+        h2,h3{
+            margin-top: 1vh;
+            text-align: start;
+            text-shadow: 2px 2px 5px black;
+        }
+        form{
+            display: inherit;
+            flex-direction: column;
+            padding: 1vh;
+            justify-self: center;
+            align-items: center;
+            background-color: rgb(243, 247, 245);
+            border-radius: 3vh;
+            width: 90%;
+            margin-top: 3vh;
+            
+            
+            .message{
+                    height: 7vh;
+                }
+
+                .message::placeholder{
+                    align-self: center;
+                }
+            input{
+                border: 1px solid black;
+                padding: 1vh;
+                border-radius: 2vh;
+                height: 1vh;
+                width: 90%;
+                margin-top: 2%;
+               
+                
+            }
+
+            input:focus{
+                box-shadow: 0px 0px 10px brown;
+                border: 0px;
+            }
+          
+
+
+            button{
+               margin-top: 1vh;
+               border: 1px solid black;
+               border-radius: 1vh;
+               padding: 0.5vh;
+               width: 90%;
+               background-color: black;
+               color: white;
+               font-family: sans-serif;
+               transition: 0.5s;
+            }
+
+            button:hover{
+                cursor: pointer;
+                text-decoration: underline;
+                background-color: burlywood;
+                color: black;
+            }
+        }
+    }
+}
