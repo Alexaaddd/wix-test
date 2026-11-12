@@ -1,1 +1,94 @@
-/*# sourceMappingURL=footer.css.map */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: rgb(245, 245, 243);
+  margin-top: auto;
+}
+footer .upper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+}
+footer .fotext {
+  display: flex;
+  -moz-column-gap: 20%;
+       column-gap: 20%;
+  font-family: sans-serif;
+  font-size: 1.5vh;
+}
+footer .litext {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+footer .litext a {
+  color: inherit;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+footer .kodak {
+  width: 90%;
+}
+footer form {
+  height: auto;
+  width: 35%;
+}
+footer form h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4vh;
+}
+footer form .maill {
+  padding: 1vh;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 2vh;
+}
+footer form .checksumb {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer form .sumb {
+  width: 30%;
+  padding: 1vh;
+  border: 1px solid grey;
+  background-color: black;
+  color: white;
+  border-radius: 2vh;
+  font-family: sans-serif;
+  font-size: 100%;
+  font-weight: bold;
+  transition: 0.5s;
+}
+footer form .sumb:hover {
+  background-color: darkgray;
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer form label {
+  font-family: sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+footer form label:hover {
+  cursor: pointer;
+}
+footer form input[type=checkbox] {
+  width: 1.5vw;
+  height: 1.5vh;
+  accent-color: #2563eb; /* Optional: changes the checkmark fill color */
+  cursor: pointer;
+}/*# sourceMappingURL=footer.css.map */
