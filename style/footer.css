@@ -6,11 +6,13 @@ body {
 }
 
 footer {
+  padding-top: 4%;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: auto;
+  max-width: 100%;
   background-color: rgb(245, 245, 243);
   margin-top: auto;
 }
@@ -18,8 +20,11 @@ footer .upper {
   display: flex;
   width: 100%;
   justify-content: center;
-  -moz-column-gap: 10%;
-       column-gap: 10%;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+}
+footer p {
+  color: rgb(172, 170, 170);
 }
 footer .fotext {
   display: flex;
@@ -34,12 +39,14 @@ footer .litext {
   white-space: nowrap;
 }
 footer .litext a {
-  color: inherit;
+  margin-top: 4%;
+  color: rgb(172, 170, 170);
   text-decoration: none;
   font-family: sans-serif;
 }
 footer .kodak {
-  width: 90%;
+  max-width: 80%;
+  height: auto;
 }
 footer form {
   height: auto;
@@ -52,6 +59,7 @@ footer form h3 {
 footer form .maill {
   padding: 1vh;
   width: 100%;
+  background-color: rgb(245, 245, 243);
   border: 1px solid grey;
   border-radius: 2vh;
 }
@@ -59,6 +67,14 @@ footer form .checksumb {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+footer form .checksumb .check {
+  border: 1px solid grey;
+  accent-color: rgb(245, 245, 243);
+}
+footer form .checksumb .check:checked {
+  accent-color: rgb(245, 245, 243);
+  border: 1px solid grey;
 }
 footer form .sumb {
   width: 30%;
@@ -91,4 +107,24 @@ footer form input[type=checkbox] {
   height: 1.5vh;
   accent-color: #2563eb; /* Optional: changes the checkmark fill color */
   cursor: pointer;
+}
+footer .lower {
+  display: flex;
+  max-width: 90%;
+  height: auto;
+  -moz-column-gap: 40%;
+       column-gap: 40%;
+  font-size: 2vh;
+  margin: 0%;
+}
+footer .lower .low-links {
+  display: flex;
+}
+footer .lower .low-links a {
+  font-weight: lighter;
+  color: rgb(120, 119, 119);
+  text-decoration: none;
+  font-family: sans-serif;
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
 }/*# sourceMappingURL=footer.css.map */

@@ -7,20 +7,24 @@ body {
 
 
 footer{
+    padding-top: 4%;
    display: flex;
    flex-flow: column;
    justify-content: center;
    align-items: center;
-   height: 70vh;
+   height: auto;
+   max-width: 100%;
    background-color: rgb(245, 245, 243);
    margin-top: auto;
     .upper{
         display: flex;
         width: 100%;
         justify-content: center;
-        column-gap: 10%;
+        column-gap: 5%;
     }
-
+    p {
+        color: rgb(172, 170, 170);
+    }
     .fotext{
         display: flex;
         column-gap: 20%;
@@ -34,14 +38,19 @@ footer{
         white-space: nowrap;
         
         
-        a{color: inherit;
+        a{
+            margin-top: 4%;
+           color: rgb(172, 170, 170);
            text-decoration: none;
-           font-family: sans-serif;}
+           font-family: sans-serif;
+
+        }
            
     }
 
     .kodak{
-        width: 90%;
+        max-width: 80%;
+        height: auto;
     }
 
 
@@ -60,6 +69,7 @@ footer{
         .maill{
             padding: 1vh;
             width: 100%;
+            background-color: rgb(245, 245, 243);
             border: 1px solid grey;
             border-radius: 2vh;
         }
@@ -67,9 +77,22 @@ footer{
        .checksumb{
         width: 100%;
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
 
-     
+         
+    .check{
+        border: 1px solid grey;
+        
+          accent-color: rgb(245, 245, 243);
+    }
+
+    .check:checked{
+         accent-color: rgb(245, 245, 243);
+         border: 1px solid grey;
+             
+    
+        }
+
        }
 
        .sumb{
@@ -108,4 +131,28 @@ footer{
        }
 
     }
+
+    .lower{
+        display: flex;
+        max-width: 90%;
+        height: auto;
+        
+        column-gap: 40%;
+        font-size: 2vh;
+        margin: 0%;
+        .low-links{
+            display: flex;
+          
+  
+            a{
+              font-weight: lighter;
+           color: rgb(120, 119, 119);
+           text-decoration: none;
+           font-family: sans-serif; 
+           column-gap: 1vw;
+            }   
+          
+        }
+ 
+        }
 }

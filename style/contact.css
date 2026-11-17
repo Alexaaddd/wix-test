@@ -3,21 +3,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  direction: flex;
-  position: sticky;
+  padding: 0%;
   height: 80vh;
-  margin: 0;
+  margin: 0%;
 }
 .background .form {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-self: center;
   align-self: center;
   justify-content: center;
   align-items: center;
   text-align: center;
   backdrop-filter: blur(10px);
-  width: auto;
+  max-width: auto;
   height: auto;
   font-family: sans-serif;
   color: white;
@@ -36,17 +35,25 @@
   align-items: center;
   background-color: rgb(243, 247, 245);
   border-radius: 3vh;
-  width: 90%;
+  width: 100%;
   margin-top: 3vh;
 }
-.background .form form .message {
-  height: 7vh;
+.background .form form textarea {
+  resize: none;
+  border-radius: 2vh;
+  max-width: 90%;
 }
 .background .form form .message::-moz-placeholder {
-  align-self: center;
+  margin-top: 0px;
+  color: #999;
+  font-size: 16px;
+  opacity: 1;
 }
 .background .form form .message::placeholder {
-  align-self: center;
+  margin-top: 0px;
+  color: #999;
+  font-size: 16px;
+  opacity: 1;
 }
 .background .form form input {
   border: 1px solid black;
@@ -74,6 +81,5 @@
 .background .form form button:hover {
   cursor: pointer;
   text-decoration: underline;
-  background-color: burlywood;
-  color: black;
+  background-color: rgb(122, 122, 121);
 }/*# sourceMappingURL=contact.css.map */
