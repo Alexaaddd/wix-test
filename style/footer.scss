@@ -9,7 +9,7 @@ body {
 footer{
     padding-top: 4%;
    display: flex;
-   flex-flow: column;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    height: auto;
@@ -27,7 +27,7 @@ footer{
     }
     .fotext{
         display: flex;
-        column-gap: 20%;
+        column-gap: 10%;
         font-family: sans-serif;
         font-size: 1.5vh;
     }
@@ -63,6 +63,7 @@ footer{
         h3{
             font-family: 'Courier New', Courier, monospace;
             font-size: 4vh;
+            
 
         }
 
@@ -134,25 +135,90 @@ footer{
 
     .lower{
         display: flex;
-        max-width: 90%;
+        width: 80%;
         height: auto;
         
-        column-gap: 40%;
+        column-gap: 30%;
         font-size: 2vh;
         margin: 0%;
+
+
         .low-links{
             display: flex;
-          
-  
+          column-gap: 1vw;
+         
             a{
               font-weight: lighter;
            color: rgb(120, 119, 119);
            text-decoration: none;
            font-family: sans-serif; 
-           column-gap: 1vw;
-            }   
           
+            }   
+         
         }
- 
+          .age{
+            font-family: sans-serif;
+             color: rgb(120, 119, 119);
+          
+            a{
+                font-weight: lighter;
+           color: rgb(120, 119, 119);
+           text-decoration: none; 
+            }
+          }
+        }
+}
+
+
+@media screen and (max-width: 1240px){
+footer{
+    
+    .lower{
+       flex-direction: column;
+    }
+
+    .upper{
+        flex-direction: column;
+        
+
+        form{
+            .checksumb{
+                flex-direction: column;
+
+                .sumb{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    footer{
+       
+
+        .fotext{
+            flex-direction: column;
+        }
+
+        .age{
+          white-space: unset;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 330px){
+
+    .low-links{
+        flex-direction: column;
+    }
+
+    
+
+        h3{
+            font-size: 2vh;
         }
 }

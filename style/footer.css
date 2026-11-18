@@ -8,7 +8,7 @@ body {
 footer {
   padding-top: 4%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -28,8 +28,8 @@ footer p {
 }
 footer .fotext {
   display: flex;
-  -moz-column-gap: 20%;
-       column-gap: 20%;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
   font-family: sans-serif;
   font-size: 1.5vh;
 }
@@ -110,21 +110,61 @@ footer form input[type=checkbox] {
 }
 footer .lower {
   display: flex;
-  max-width: 90%;
+  width: 80%;
   height: auto;
-  -moz-column-gap: 40%;
-       column-gap: 40%;
+  -moz-column-gap: 30%;
+       column-gap: 30%;
   font-size: 2vh;
   margin: 0%;
 }
 footer .lower .low-links {
   display: flex;
+  -moz-column-gap: 1vw;
+       column-gap: 1vw;
 }
 footer .lower .low-links a {
   font-weight: lighter;
   color: rgb(120, 119, 119);
   text-decoration: none;
   font-family: sans-serif;
-  -moz-column-gap: 1vw;
-       column-gap: 1vw;
+}
+footer .lower .age {
+  font-family: sans-serif;
+  color: rgb(120, 119, 119);
+}
+footer .lower .age a {
+  font-weight: lighter;
+  color: rgb(120, 119, 119);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1240px) {
+  footer .lower {
+    flex-direction: column;
+  }
+  footer .upper {
+    flex-direction: column;
+  }
+  footer .upper form .checksumb {
+    flex-direction: column;
+  }
+  footer .upper form .checksumb .sumb {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  footer .fotext {
+    flex-direction: column;
+  }
+  footer .age {
+    white-space: unset;
+  }
+}
+@media screen and (max-width: 330px) {
+  .low-links {
+    flex-direction: column;
+  }
+  h3 {
+    font-size: 2vh;
+  }
 }/*# sourceMappingURL=footer.css.map */
