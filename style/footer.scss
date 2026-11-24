@@ -79,7 +79,7 @@ footer{
         width: 100%;
         display: flex;
         justify-content: space-between;
-
+        white-space: nowrap;
          
     .check{
         border: 1px solid grey;
@@ -119,6 +119,8 @@ footer{
        label{
         font-family: sans-serif;
         user-select: none;
+        white-space: nowrap;
+        font-size: 110%;
        }
        label:hover{
         cursor: pointer;
@@ -127,7 +129,7 @@ footer{
        input[type="checkbox"]{
            width: 1.5vw;
            height: 1.5vh;
-           accent-color: #2563eb; /* Optional: changes the checkmark fill color */
+           accent-color: rgb(245, 245, 243);
            cursor: pointer;
        }
 
@@ -172,53 +174,120 @@ footer{
 
 @media screen and (max-width: 1240px){
 footer{
-    
+    padding-left: 2%;
+    justify-content: flex-start;
+    align-items: flex-start;
     .lower{
        flex-direction: column;
+       
     }
 
     .upper{
         flex-direction: column;
-        
+       width: 99%;
 
         form{
+            width: 100%;
+
+            .maill{
+                max-width: 97%;
+            }
             .checksumb{
-                flex-direction: column;
+
+                
 
                 .sumb{
-                    width: 100%;
+                    width: 50%;
                 }
+
+                
+       input[type="checkbox"]{
+           width: 2vw;
+           height: 2vh;
+            accent-color: rgb(245, 245, 243);
+           cursor: pointer;
+       }
             }
         }
     }
     }
+
+    .kodak{
+        width: 90%;
+    }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 725px){
 
     footer{
-       
+       form{
+
+
+        
+                .sumb{
+                    width: auto;
+                }
+   .maill{
+                width: 94%;
+            }
+
+         input[type="checkbox"]{
+           width: 3vw;
+           height: 3vh;
+            accent-color: rgb(245, 245, 243);
+           cursor: pointer;
+       }
+       }
 
         .fotext{
             flex-direction: column;
         }
 
         .age{
-          white-space: unset;
+          white-space: normal;
         }
     }
     
 }
 
-@media screen and (max-width: 330px){
+@media screen and(max-width:460px){
+
+    header{
+        .checksumb{
+            
+            flex-direction: column;
+            
+        }
+    }
+    
+}
+
+@media screen and (max-width: 377px){
 
     .low-links{
         flex-direction: column;
     }
 
-    
+      
+       label{
+       
+        white-space: normal;
+        font-size: 110%;
+       }
+         input[type="checkbox"]{
+           width: 4vw;
+           height: 4vh;
+            accent-color: rgb(245, 245, 243);
+           cursor: pointer;
+       }
+
+    form{
+        .sumb{
+            margin-top: 1vh;
+        }
+    }
 
         h3{
-            font-size: 2vh;
+            font-size: 1vh;
         }
 }

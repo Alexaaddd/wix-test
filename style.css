@@ -1,1 +1,41 @@
-/*# sourceMappingURL=style.css.map */
+.main-banner {
+  width: 100%;
+  background-image: url(./images/Camping\ Store_Gemini\ 3\ \(Nano\ Banana\ Pro\)_2026-07-24_11-40-49_edited_edited_edited.avif);
+  background-size: cover; /* Fills the full width and height */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  filter: brightness(70%);
+  padding: 15%;
+}
+.main-banner .blurry {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  height: 100%;
+  max-width: 40%;
+}
+.main-banner .blurry h1 {
+  font-size: 4vw;
+  line-height: 1.05;
+  color: white;
+}
+.main-banner .blurry p {
+  font-size: 1vw;
+  max-width: 70%;
+  font-family: sans-serif;
+  color: white;
+}
+.main-banner .blurry .button {
+  background-color: white;
+  color: black;
+  padding: 1vh;
+}
+.main-banner .blurry .button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

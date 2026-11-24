@@ -67,6 +67,7 @@ footer form .checksumb {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
 }
 footer form .checksumb .check {
   border: 1px solid grey;
@@ -98,6 +99,8 @@ footer form label {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  white-space: nowrap;
+  font-size: 110%;
 }
 footer form label:hover {
   cursor: pointer;
@@ -105,7 +108,7 @@ footer form label:hover {
 footer form input[type=checkbox] {
   width: 1.5vw;
   height: 1.5vh;
-  accent-color: #2563eb; /* Optional: changes the checkmark fill color */
+  accent-color: rgb(245, 245, 243);
   cursor: pointer;
 }
 footer .lower {
@@ -139,32 +142,75 @@ footer .lower .age a {
 }
 
 @media screen and (max-width: 1240px) {
+  footer {
+    padding-left: 2%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   footer .lower {
     flex-direction: column;
   }
   footer .upper {
     flex-direction: column;
+    width: 99%;
   }
-  footer .upper form .checksumb {
-    flex-direction: column;
-  }
-  footer .upper form .checksumb .sumb {
+  footer .upper form {
     width: 100%;
   }
+  footer .upper form .maill {
+    max-width: 97%;
+  }
+  footer .upper form .checksumb .sumb {
+    width: 50%;
+  }
+  footer .upper form .checksumb input[type=checkbox] {
+    width: 2vw;
+    height: 2vh;
+    accent-color: rgb(245, 245, 243);
+    cursor: pointer;
+  }
+  .kodak {
+    width: 90%;
+  }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 725px) {
+  footer form .sumb {
+    width: auto;
+  }
+  footer form .maill {
+    width: 94%;
+  }
+  footer form input[type=checkbox] {
+    width: 3vw;
+    height: 3vh;
+    accent-color: rgb(245, 245, 243);
+    cursor: pointer;
+  }
   footer .fotext {
     flex-direction: column;
   }
   footer .age {
-    white-space: unset;
+    white-space: normal;
   }
 }
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 377px) {
   .low-links {
     flex-direction: column;
   }
+  label {
+    white-space: normal;
+    font-size: 110%;
+  }
+  input[type=checkbox] {
+    width: 4vw;
+    height: 4vh;
+    accent-color: rgb(245, 245, 243);
+    cursor: pointer;
+  }
+  form .sumb {
+    margin-top: 1vh;
+  }
   h3 {
-    font-size: 2vh;
+    font-size: 1vh;
   }
 }/*# sourceMappingURL=footer.css.map */
