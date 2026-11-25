@@ -1,49 +1,204 @@
-.main-banner{
-    width: 100%;
-    background-image: url(./images/Camping\ Store_Gemini\ 3\ \(Nano\ Banana\ Pro\)_2026-07-24_11-40-49_edited_edited_edited.avif);
-   background-size: cover;      /* Fills the full width and height */
-  background-position: center; /* Centers the image */
+.main-banner {
+  position: relative;
+  width: 100%;
+  min-height: clamp(60vh, 34.4vw, 100vh);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./images/Camping\ Store_Gemini\ 3\ \(Nano\ Banana\ Pro\)_2026-07-24_11-40-49_edited_edited_edited.avif);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  position: relative;
-  filter: brightness(70%);
- padding: 15%;
-   
-  
-  .blurry{
+
+  .blurry {
     position: absolute;
     top: 0;
+    bottom: 0;
+    left: 12%;
+    box-sizing: border-box;
+    width: 28.5%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgba(255, 255, 255, 0.08);
-     backdrop-filter: blur(14px);
-    
-        height: 100%;
-        max-width: 40%;
-       
-      
-       
-        h1{
-            font-size: 4vw;
-            line-height: 1.05;
-            color: white;
-        }
-        p{
-            font-size: 1vw;
-            max-width: 70%;
-            font-family: sans-serif;
-            color: white;
-        }
-        .button{
-            background-color: white;
-            color: black;
-            padding: 1vh;
-        }
-        .button:hover{
-            cursor: pointer;
-        }
+    align-items: flex-start;
+    padding: clamp(2vh, 1.15vw, 4vh);
+    padding-bottom: clamp(3vh, 2.6vw, 8vh);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(clamp(1vh, 0.55vw, 2vh));
+    -webkit-backdrop-filter: blur(clamp(1vh, 0.55vw, 2vh));
+
+    h1 {
+      margin: 0 0 clamp(1vh, 1.2vw, 4vh);
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: clamp(4.5vh, 3.8vw, 11vh);
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+      color: white;
     }
 
+    p {
+      margin: 0 0 clamp(1.5vh, 1.1vw, 4vh);
+      max-width: 90%;
+      font-family: 'Figtree', sans-serif;
+      font-size: clamp(1.8vh, 0.9vw, 2.6vh);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: white;
+    }
 
+    .button {
+      display: inline-block;
+      padding: clamp(1vh, 0.35vw, 1.6vh) clamp(2vh, 1vw, 3vh);
+      background-color: #fcfbf7;
+      color: #1f1d1d;
+      border-radius: 100vh;
+      font-family: 'Figtree', sans-serif;
+      font-size: clamp(1.6vh, 0.75vw, 2.4vh);
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      cursor: pointer;
+      background-color: darkgray;
+    }
+  }
+}
+
+.collections {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: clamp(3vh, 2.5vw, 8vh);
+  padding: clamp(3vh, 2.5vw, 8vh) 0;
+  background-color: #fcfbf7;
+
+  .wrap {
+    width: clamp(74%, 140vh - 80vw, 92%);
+  }
+
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5vh 3%;
+    margin-bottom: clamp(1.5vh, 1vw, 3vh);
+
+    .label {
+      margin: 0;
+      font-family: 'Figtree', sans-serif;
+      font-size: clamp(1.8vh, 0.85vw, 2.6vh);
+      letter-spacing: -0.02em;
+      color: #1f1d1d;
+    }
+
+    .category {
+      padding: clamp(0.8vh, 0.4vw, 1.4vh) clamp(1.5vh, 0.8vw, 2.4vh);
+      border: 0.15vh solid #1f1d1d;
+      border-radius: 100vh;
+      font-family: 'Figtree', sans-serif;
+      font-size: clamp(1.8vh, 0.85vw, 2.6vh);
+      letter-spacing: -0.02em;
+      color: #1f1d1d;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      background-color: #1f1d1d;
+      color: white;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1vh, 0.7vw, 2vh);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: clamp(45vh, 35vw, 80vh);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+
+    h2 {
+      margin: 0 0 clamp(1.5vh, 1.3vw, 4vh);
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: clamp(3.2vh, 1.9vw, 6vh);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: white;
+    }
+
+    .shop {
+      font-family: 'Figtree', sans-serif;
+      font-size: clamp(1.8vh, 0.85vw, 2.6vh);
+      letter-spacing: -0.02em;
+      color: white;
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+    .shop:hover {
+      opacity: 0.7;
+    }
+  }
+
+ 
+
+  .camping {
+    flex: 1.2 1 0%;
+    min-width: 25vh;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(./images/download\ \(1\).avif);
+  }
+
+  .sleep {
+    flex: 1 1 0%;
+    min-width: 20vh;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(./images/download.avif);
+  }
+
+  .personal {
+    flex: 1 1 0%;
+    min-width: 20vh;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+      url(./images/download\ \(2\).avif);
+  }
+}
+ .card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+@media (max-width: 1240px) {
+  .main-banner .blurry {
+    left: 0;
+    width: 60%;
+  }
+}
+
+@media (max-width: 725px) {
+  .main-banner {
+    min-height: 80vh;
+  }
+
+  .main-banner .blurry {
+    top: auto;
+    width: 100%;
+  }
 }

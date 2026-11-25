@@ -1,168 +1,274 @@
-body{
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;
-  background-color: rgb(245, 245, 243) ;
+  background-color: rgb(245, 245, 243);
+  overflow-x: hidden;
 }
 
-.about-border{
-    display: flex;
-   align-items: flex-end;
-   background-image: url(../images/about-images/download.avif);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: scroll;
-   object-fit: cover;
-  height: clamp(63vh, 50vh, 30vh);
+img {
+  max-width: 100%;
+}
+
+.about-border {
+  display: flex;
+  align-items: flex-end;
+  background-image: url(../images/about-images/download.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  min-height: 18rem;
   width: 100%;
   color: white;
- 
-  
-  h1{
+
+  h1 {
     width: 30%;
-    font-size: clamp(35px, 3.6vw, 72px);
-   margin-left: 10vw;
+    font-size: clamp(1.75rem, 3.6vw, 4.5rem);
+    margin-left: 10vw;
+    margin-bottom: 1.25rem;
   }
-  
-
-
 }
 
-.chasing{
-   
-   width: 100%;
-   height: auto;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   
-   align-items: center;
- font-family: sans-serif;
- margin-top: 10%;
-   h3{
-   font-weight: 100;
-       font-size: 130%;
-       width: 0;
-       white-space: nowrap;
-       overflow: hidden;
-       border-right: 2px solid black;
-       animation: typing 5s steps(20) forwards ,
-                  blink 0.7s infinite;
-   }
+.chasing {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 10%;
 
-   @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 24ch;
-    }
+  h3 {
+    font-weight: 100;
+    font-size: clamp(0.875rem, 2vw, 1.3rem);
+    width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.125rem solid black;
+    animation: typing 5s steps(20) forwards, blink 0.7s infinite;
+  }
+
+  p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: clamp(1.4rem, 4vw, 4rem);
+    max-width: 60%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-   p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 400%;
-    max-width: 60%;
-    
-  
-   }
-
+  50% {
+    border-color: transparent;
+  }
 }
 
-.photo-div{
+.photo-div {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-align-items: center;
-margin-top: 7%;
+  align-items: center;
+  margin-top: 7%;
+
   .photos {
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 1%;
-   
+
     img {
-        flex: 1;
-        flex-wrap: wrap;
-        height: 50vh;
-        object-fit: cover;
-        box-shadow: 0px 0px 5px black; 
-        white-space: nowrap;
-        transition: 0.5s;
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      box-shadow: 0 0 0.3rem black;
+      transition: 0.5s;
     }
-    img:hover{
+
+    img:hover {
       cursor: pointer;
       scale: 1.05;
     }
-}
-
-.text-part{
-  display: flex;
-  width: 70%;
-  justify-content: space-around;
-  column-gap: 30%;
-  font-family: sans-serif;
-  h3{
-    font-size: 200%;
-    width: 30%;
   }
 
-  p{
-    font-size: 150%;
-    width: 50%;
+  .text-part {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    column-gap: 30%;
+    font-family: sans-serif;
+    margin-top: 2rem;
+
+    h3 {
+      font-size: clamp(1.25rem, 2.2vw, 2rem);
+      width: 30%;
+    }
+
+    p {
+      font-size: clamp(1rem, 1.6vw, 1.5rem);
+      width: 50%;
+    }
   }
 }
 
-
-}
-
-.ab-down{
+.ab-down {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 5%;
   margin-top: 10%;
   margin-bottom: 10%;
-  .asked{
-    max-width: 40%;
-    font-size: 200%;
-    
-    margin-left: 40%;
-    
 
+  .asked {
+    max-width: 40%;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    margin-left: 40%;
   }
 
-  
-
-  .general{
+  .general {
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
-    font-size: 120%;
-  
-    p{
+    font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+
+    p {
       max-width: 70%;
     }
   }
-.questions{
-   transition: 0.2s;
 
-   i:hover{
-    cursor: pointer;
-   }
-}
-  .questions:hover{
+  .questions {
+    transition: 0.2s;
+
+    i:hover {
+      cursor: pointer;
+    }
+  }
+
+  .questions:hover {
     scale: 1.01;
-        user-select: none;
+    user-select: none;
+  }
+}
 
+@media (max-width: 64em) {
+  .about-border h1 {
+    width: 50%;
+  }
+
+  .chasing p {
+    max-width: 80%;
+  }
+
+  .photo-div .photos {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+  }
+
+  .photo-div .text-part {
+    width: 85%;
+    column-gap: 5%;
+  }
+
+  .photo-div .text-part h3 {
+    width: 40%;
+  }
+
+  .photo-div .text-part p {
+    width: 55%;
+  }
+
+  .ab-down .asked {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+
+  .ab-down .general p {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 48em) {
+  .about-border h1 {
+    width: 80%;
+    margin-left: 8%;
+  }
+
+  .chasing {
+    margin-top: 4rem;
+  }
+
+  .chasing p {
+    max-width: 90%;
+  }
+
+  .photo-div {
+    margin-top: 3rem;
+  }
+
+  .photo-div .photos img {
+    height: 30vh;
+  }
+
+  .photo-div .text-part {
+    flex-direction: column;
+    width: 90%;
+    row-gap: 1rem;
+  }
+
+  .photo-div .text-part h3,
+  .photo-div .text-part p {
+    width: 100%;
+  }
+
+  .ab-down {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .ab-down .asked {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+
+  .ab-down .general {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .ab-down .general p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 30em) {
+  .about-border {
+    min-height: 14rem;
+  }
+
+  .photo-div .photos {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-div .photos img {
+    height: 25vh;
+  }
+
+  .chasing h3 {
+    font-size: 0.875rem;
   }
 }

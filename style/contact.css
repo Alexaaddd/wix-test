@@ -1,113 +1,148 @@
-body {
-  padding: 0%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.background {
+body {
+  font-family: "Figtree", sans-serif;
+}
+
+.contact {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/Image by JUSTIN BUISSON.avif") center/cover no-repeat fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
   align-items: center;
-  background-image: url(../images/Image\ by\ JUSTIN\ BUISSON.avif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.5);
-  padding: 0%;
-  height: 80vh;
-  margin: 0%;
+  padding: 120px 20px 80px;
 }
-.background h1 {
+
+.title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: -2px;
   color: white;
-  font-size: 4vh;
-  text-shadow: 2px 2px 5px black;
-  animation-name: touch;
+  text-align: center;
+  margin-bottom: 70px;
 }
-.background .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  backdrop-filter: blur(10px);
-  width: 30%;
-  height: auto;
-  font-family: sans-serif;
+
+.card {
+  width: 100%;
+  max-width: 673px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.label {
   color: white;
-  padding: 1%;
-}
-.background .form h2 {
-  margin-top: 1vh;
-  text-align: start;
-  text-shadow: 2px 2px 5px black;
-}
-.background .form p {
-  margin-top: 0vh;
-  font-size: 1.5vh;
-  max-width: 70%;
-  text-shadow: 2px 2px 5px black;
-}
-.background .form form {
-  display: inherit;
-  flex-direction: column;
-  padding: 1vh;
-  justify-self: center;
-  align-items: center;
-  background-color: rgb(243, 247, 245);
-  border-radius: 3vh;
-  width: 95%;
-  margin-top: 3vh;
-}
-.background .form form textarea {
-  resize: none;
-  border-radius: 1vh;
-  margin-top: 2%;
-  font-family: "heebo", sans-serif;
+  font-size: 20px;
   font-weight: 500;
-  font-size: 1vh;
-  width: 97%;
-  height: 7vh;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
 }
-.background .form form textarea::-moz-placeholder {
-  margin-top: 0px;
-  color: #999;
-  font-size: 16px;
-  opacity: 1;
-}
-.background .form form textarea::placeholder {
-  margin-top: 0px;
-  color: #999;
-  font-size: 16px;
-  opacity: 1;
-}
-.background .form form input {
-  border: 1px solid black;
-  padding: 1vh;
-  border-radius: 2vh;
-  height: 1vh;
-  width: 95%;
-  margin-top: 2%;
-}
-.background .form form input:focus {
-  box-shadow: 0px 0px 10px brown;
-  border: 0px;
-}
-.background .form form button {
-  margin-top: 1vh;
-  border: 1px solid black;
-  border-radius: 1vh;
-  padding: 0.5vh;
-  width: 95%;
-  background-color: black;
+
+.text {
   color: white;
-  font-family: sans-serif;
-  transition: 0.5s;
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  max-width: 520px;
+  margin-bottom: 90px;
 }
-.background .form form button:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  background-color: rgb(122, 122, 121);
+
+.form {
+  background: #fcfbf7;
+  border-radius: 28px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 615px;
 }
-.background .form .form:hover {
-  scale: 1.5;
+
+.input {
+  width: 100%;
+  height: 37px;
+  padding: 0 13px;
+  background: #fcfbf7;
+  border: 1px solid #1f1d1d;
+  border-radius: 999px;
+  font-family: "Figtree", sans-serif;
+  font-size: 14px;
+  color: #1f1d1d;
+  outline: none;
+}
+
+.input::-moz-placeholder {
+  color: #55524f;
+}
+
+.input::placeholder {
+  color: #55524f;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px rgba(31, 29, 29, 0.25);
+}
+
+.textarea {
+  height: 92px;
+  padding: 10px 13px;
+  border-radius: 22px;
+  resize: none;
+}
+
+.button {
+  height: 39px;
+  border: none;
+  border-radius: 999px;
+  background: #1f1d1d;
+  color: white;
+  font-family: "Figtree", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
   cursor: pointer;
+}
+
+.button:hover {
+  background: black;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 90px 20px 60px;
+  }
+  .title {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+  .text {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .contact {
+    padding: 70px 15px 40px;
+  }
+  .title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .card {
+    padding: 20px 16px;
+  }
+  .label {
+    font-size: 16px;
+  }
+  .text {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=contact.css.map */

@@ -1,293 +1,175 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
   margin: 0;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 4% 3% 2%;
+  background-color: rgb(245, 245, 243);
+  margin-top: auto;
 
-footer{
-    padding-top: 4%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   height: auto;
-   max-width: 100%;
-   background-color: rgb(245, 245, 243);
-   margin-top: auto;
-    .upper{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        column-gap: 5%;
-    }
-    p {
-        color: rgb(172, 170, 170);
-    }
-    .fotext{
-        display: flex;
-        column-gap: 10%;
-        font-family: sans-serif;
-        font-size: 1.5vh;
-    }
-
-    .litext{
-        display: flex;
-        flex-direction: column;
-        white-space: nowrap;
-        
-        
-        a{
-            margin-top: 4%;
-           color: rgb(172, 170, 170);
-           text-decoration: none;
-           font-family: sans-serif;
-
-        }
-           
-    }
-
-    .kodak{
-        max-width: 80%;
-        height: auto;
-    }
-
-
-    form{
-
-        height: auto;
-        width: 35%;
-        
-        
-        h3{
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 4vh;
-            
-
-        }
-
-        .maill{
-            padding: 1vh;
-            width: 100%;
-            background-color: rgb(245, 245, 243);
-            border: 1px solid grey;
-            border-radius: 2vh;
-        }
-
-       .checksumb{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        white-space: nowrap;
-         
-    .check{
-        border: 1px solid grey;
-        
-          accent-color: rgb(245, 245, 243);
-    }
-
-    .check:checked{
-         accent-color: rgb(245, 245, 243);
-         border: 1px solid grey;
-             
-    
-        }
-
-       }
-
-       .sumb{
-        width: 30%;
-        padding: 1vh;
-        border: 1px solid grey;
-        background-color: black;
-        color: white;
-        border-radius: 2vh;
-        font-family: sans-serif;
-        font-size: 100%;
-        font-weight: bold;
-        transition: 0.5s;
-
-       }
-
-       .sumb:hover{
-        background-color: darkgray;
-        cursor: pointer;
-        text-decoration: underline;
-       }
-       
-       label{
-        font-family: sans-serif;
-        user-select: none;
-        white-space: nowrap;
-        font-size: 110%;
-       }
-       label:hover{
-        cursor: pointer;
-       }
-
-       input[type="checkbox"]{
-           width: 1.5vw;
-           height: 1.5vh;
-           accent-color: rgb(245, 245, 243);
-           cursor: pointer;
-       }
-
-    }
-
-    .lower{
-        display: flex;
-        width: 80%;
-        height: auto;
-        
-        column-gap: 30%;
-        font-size: 2vh;
-        margin: 0%;
-
-
-        .low-links{
-            display: flex;
-          column-gap: 1vw;
-         
-            a{
-              font-weight: lighter;
-           color: rgb(120, 119, 119);
-           text-decoration: none;
-           font-family: sans-serif; 
-          
-            }   
-         
-        }
-          .age{
-            font-family: sans-serif;
-             color: rgb(120, 119, 119);
-          
-            a{
-                font-weight: lighter;
-           color: rgb(120, 119, 119);
-           text-decoration: none; 
-            }
-          }
-        }
-}
-
-
-@media screen and (max-width: 1240px){
-footer{
-    padding-left: 2%;
-    justify-content: flex-start;
+ .upper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
-    .lower{
-       flex-direction: column;
-       
+    margin-left: clamp(5%, 2vw, 10%);
+    width: 100%;
+    gap: 4vh 5%;
+  }
+
+  p {
+    color: rgb(172, 170, 170);
+  }
+
+  .fotext {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 40vh;
+    gap: 3vh 10%;
+    font-family: sans-serif;
+    font-size: clamp(1.8vh, 1.2vw, 2.4vh);
+  }
+
+  .litext {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+
+    a {
+      margin-top: 4%;
+      color: rgb(172, 170, 170);
+      text-decoration: none;
+      font-family: sans-serif;
+    }
+  }
+
+  .kodak {
+    max-width: clamp(40%, 140vh - 80vw, 90%);
+    height: auto;
+  }
+
+  form {
+    flex: 0 0 auto;
+    width: clamp(35%, 140vh - 80vw, 100%);
+    height: auto;
+
+    h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: clamp(3.5vh, 4vw, 7vh);
     }
 
-    .upper{
-        flex-direction: column;
-       width: 99%;
-
-        form{
-            width: 100%;
-
-            .maill{
-                max-width: 97%;
-            }
-            .checksumb{
-
-                
-
-                .sumb{
-                    width: 50%;
-                }
-
-                
-       input[type="checkbox"]{
-           width: 2vw;
-           height: 2vh;
-            accent-color: rgb(245, 245, 243);
-           cursor: pointer;
-       }
-            }
-        }
-    }
+    .maill {
+      box-sizing: border-box;
+      width: 100%;
+      padding: clamp(1vh, 1.2vw, 1.6vh);
+      background-color: rgb(245, 245, 243);
+      border: 0.15vh solid grey;
+      border-radius: 2vh;
     }
 
-    .kodak{
-        width: 90%;
+    .checksumb {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5vh 3%;
+      width: 100%;
     }
+
+    .check {
+      border: 0.15vh solid grey;
+      accent-color: rgb(245, 245, 243);
+    }
+
+    .sumb {
+      flex: 0 1 auto;
+      min-width: 30%;
+      padding: clamp(1vh, 1.2vw, 1.6vh) 4vh;
+      border: 0.15vh solid grey;
+      background-color: black;
+      color: white;
+      border-radius: 2vh;
+      font-family: sans-serif;
+      font-size: 100%;
+      font-weight: bold;
+      transition: 0.5s;
+    }
+
+    .sumb:hover {
+      background-color: darkgray;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    label {
+      font-family: sans-serif;
+      font-size: clamp(1.8vh, 1.3vw, 2.4vh);
+      user-select: none;
+    }
+
+    label:hover {
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      flex-shrink: 0;
+      width: clamp(1.8vh, 1.2vw, 2.4vh);
+      height: clamp(1.8vh, 1.2vw, 2.4vh);
+      accent-color: rgb(245, 245, 243);
+      cursor: pointer;
+    }
+  }
+
+  .lower {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    gap: 2vh 5%;
+    font-size: clamp(1.8vh, 2vw, 3vh);
+    margin: 0;
+
+    .low-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1vh clamp(2vw, 2vh, 4vw);
+
+      a {
+        font-weight: lighter;
+        color: rgb(120, 119, 119);
+        text-decoration: none;
+        font-family: sans-serif;
+      }
+    }
+
+    .age {
+      font-family: sans-serif;
+      color: rgb(120, 119, 119);
+      white-space: normal;
+
+      a {
+        font-weight: lighter;
+        color: rgb(120, 119, 119);
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 725px){
-
-    footer{
-       form{
-
-
-        
-                .sumb{
-                    width: auto;
-                }
-   .maill{
-                width: 94%;
-            }
-
-         input[type="checkbox"]{
-           width: 3vw;
-           height: 3vh;
-            accent-color: rgb(245, 245, 243);
-           cursor: pointer;
-       }
-       }
-
-        .fotext{
-            flex-direction: column;
-        }
-
-        .age{
-          white-space: normal;
-        }
+@media (max-width: 1240px) {
+    .upper {
+      justify-content: flex-start;
     }
-    
-}
-
-@media screen and(max-width:460px){
-
-    header{
-        .checksumb{
-            
-            flex-direction: column;
-            
-        }
-    }
-    
-}
-
-@media screen and (max-width: 377px){
-
-    .low-links{
-        flex-direction: column;
-    }
-
-      
-       label{
-       
-        white-space: normal;
-        font-size: 110%;
-       }
-         input[type="checkbox"]{
-           width: 4vw;
-           height: 4vh;
-            accent-color: rgb(245, 245, 243);
-           cursor: pointer;
-       }
-
-    form{
-        .sumb{
-            margin-top: 1vh;
-        }
-    }
-
-        h3{
-            font-size: 1vh;
-        }
-}
+  }

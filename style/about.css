@@ -3,8 +3,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;
   background-color: rgb(245, 245, 243);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 .about-border {
@@ -14,17 +18,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 63vh;
+  height: 50vh;
+  min-height: 18rem;
   width: 100%;
   color: white;
 }
 .about-border h1 {
   width: 30%;
-  font-size: clamp(35px, 3.6vw, 72px);
+  font-size: clamp(1.75rem, 3.6vw, 4.5rem);
   margin-left: 10vw;
+  margin-bottom: 1.25rem;
 }
 
 .chasing {
@@ -39,19 +42,26 @@ body {
 }
 .chasing h3 {
   font-weight: 100;
-  font-size: 130%;
+  font-size: clamp(0.875rem, 2vw, 1.3rem);
   width: 0;
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black;
+  border-right: 0.125rem solid black;
   animation: typing 5s steps(20) forwards, blink 0.7s infinite;
 }
+.chasing p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: clamp(1.4rem, 4vw, 4rem);
+  max-width: 60%;
+}
+
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 24ch;
+    width: 23ch;
   }
 }
 @keyframes blink {
@@ -59,12 +69,6 @@ body {
     border-color: transparent;
   }
 }
-.chasing p {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 400%;
-  max-width: 60%;
-}
-
 .photo-div {
   width: 100%;
   height: auto;
@@ -74,19 +78,18 @@ body {
   margin-top: 7%;
 }
 .photo-div .photos {
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   -moz-column-gap: 1%;
        column-gap: 1%;
 }
 .photo-div .photos img {
-  flex: 1;
-  flex-wrap: wrap;
+  width: 100%;
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
-  box-shadow: 0px 0px 5px black;
-  white-space: nowrap;
+  box-shadow: 0 0 0.3rem black;
   transition: 0.5s;
 }
 .photo-div .photos img:hover {
@@ -100,13 +103,14 @@ body {
   -moz-column-gap: 30%;
        column-gap: 30%;
   font-family: sans-serif;
+  margin-top: 2rem;
 }
 .photo-div .text-part h3 {
-  font-size: 200%;
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
   width: 30%;
 }
 .photo-div .text-part p {
-  font-size: 150%;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
   width: 50%;
 }
 
@@ -122,14 +126,14 @@ body {
 }
 .ab-down .asked {
   max-width: 40%;
-  font-size: 200%;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
   margin-left: 40%;
 }
 .ab-down .general {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  font-size: 120%;
+  font-size: clamp(0.9rem, 1.3vw, 1.2rem);
 }
 .ab-down .general p {
   max-width: 70%;
@@ -145,4 +149,95 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+@media (max-width: 64em) {
+  .about-border h1 {
+    width: 50%;
+  }
+  .chasing p {
+    max-width: 80%;
+  }
+  .photo-div .photos {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .photo-div .text-part {
+    width: 85%;
+    -moz-column-gap: 5%;
+         column-gap: 5%;
+  }
+  .photo-div .text-part h3 {
+    width: 40%;
+  }
+  .photo-div .text-part p {
+    width: 55%;
+  }
+  .ab-down .asked {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+  .ab-down .general p {
+    max-width: 90%;
+  }
+}
+@media (max-width: 48em) {
+  .about-border h1 {
+    width: 80%;
+    margin-left: 8%;
+  }
+  .chasing {
+    margin-top: 4rem;
+  }
+  .chasing p {
+    max-width: 90%;
+  }
+  .photo-div {
+    margin-top: 3rem;
+  }
+  .photo-div .photos img {
+    height: 30vh;
+  }
+  .photo-div .text-part {
+    flex-direction: column;
+    width: 90%;
+    row-gap: 1rem;
+  }
+  .photo-div .text-part h3,
+  .photo-div .text-part p {
+    width: 100%;
+  }
+  .ab-down {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  .ab-down .asked {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+  .ab-down .general {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .ab-down .general p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 30em) {
+  .about-border {
+    min-height: 14rem;
+  }
+  .photo-div .photos {
+    grid-template-columns: 1fr;
+  }
+  .photo-div .photos img {
+    height: 25vh;
+  }
+  .chasing h3 {
+    font-size: 0.875rem;
+  }
 }/*# sourceMappingURL=about.css.map */
